@@ -6,12 +6,11 @@
 #include <math.h>
 
 /*
- * Medidor de Consumo de Energía - PIC18F4550
+ * Medidor de Consumo de EnergÃ­a - PIC18F4550
  * Sensor: ACS712 20A en AN0
  * LCD I2C en RB0 (SDA), RB1 (SCL)
- * UART para transmisión de datos
+ * UART para transmisiÃ³n de datos
  * Oscilador externo de 20 MHz
- * Autor: ChatGPT
 */
 
 #pragma config FOSC = HSPLL_HS  // Oscilador externo de alta velocidad con PLL habilitado
@@ -29,9 +28,9 @@
 #pragma config DEBUG = OFF
 #define _XTAL_FREQ 48000000UL
 
-#define N 240  // número de muestras
+#define N 240  // nÃºmero de muestras
 #define OFFSET_ADC 512  // corresponde a ~2.5V con Vref=5V
-#define SENSIBILIDAD 0.1  // ejemplo: 100 mV/A para ACS712-20A
+#define SENSIBILIDAD 0.1  //
 
 // ================= UART ==================
 void UART_Init(unsigned long baud) {
@@ -65,7 +64,7 @@ void UART_Write_Text(const char* text) {
 
 // ================= ADC ==================
 void ADC_Init() {
-    ADCON1 = 0x0E;  // AN0 analógico, resto digital
+    ADCON1 = 0x0E;  // AN0 analÃ³gico, resto digital
     ADCON2 = 0xAE; 
     ADCON0 = 0x01;  // Canal 0 (AN0), ADC on
 }
@@ -194,4 +193,5 @@ void main(void) {
         __delay_ms(500);
     }
 }
+
 
