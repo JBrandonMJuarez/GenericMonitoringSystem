@@ -1,7 +1,7 @@
 #include <WiFiNINA.h>
 
-char ssid[] = "DIGIFIBRA-0F1F";             //  your network SSID (name) between the " "
-char pass[] = "8+f3=gXR8^";      // your network password between the " "
+char ssid[] = "";             //  your network SSID (name) between the " "
+char pass[] = "";      // your network password between the " "
 int keyIndex = 0;                 // your network key Index number (needed only for WEP)
 int status = WL_IDLE_STATUS;      //connection status   
 WiFiServer server(80);
@@ -128,4 +128,5 @@ void connect_WiFi() {
     delay(10000);
   }
 }
+
 
