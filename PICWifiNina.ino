@@ -1,8 +1,8 @@
 #include <WiFiNINA.h>
 
-char ssid[] = "";             //  your network SSID (name) between the " "
-char pass[] = "";      // your network password between the " "
-int keyIndex = 0;                 // your network key Index number (needed only for WEP)
+char ssid[] = "";             // network SSID (name)
+char pass[] = "";      // network password
+int keyIndex = 0;                 // network key Index number (needed only for WEP)
 int status = WL_IDLE_STATUS;      //connection status   
 WiFiServer server(80);
 WiFiClient client;
@@ -128,5 +128,6 @@ void connect_WiFi() {
     delay(10000);
   }
 }
+
 
 
